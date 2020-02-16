@@ -24,7 +24,7 @@ let express     = require("express"),
     cloudinary.config({ 
       cloud_name: 'dqu3epati', 
       api_key: 383246281995347, 
-      api_secret: process.env.API_SECRET_KEY
+      api_secret: "8QpFc2qex-TCKKKhNYB3avfR5yE"
     });
 
 

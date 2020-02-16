@@ -54,5 +54,5 @@ app.use("/poster/:id/comments", commentRoutes);
 
 
 app.listen(process.env.PORT || 3000, (req, res) => {
-    console.log("Workingdur server has started!")
+    console.log("CloudyDrone server has started!")
 })

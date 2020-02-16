@@ -17,11 +17,13 @@ let express     = require("express"),
         cb(null, true);
     };
     var upload = multer({ storage: storage, fileFilter: imageFilter})
-    require('dotenv').config()
+
+    require('dotenv').config();
+
     var cloudinary = require('cloudinary');
     cloudinary.config({ 
       cloud_name: 'dqu3epati', 
-      api_key: process.env.API_KEY, 
+      api_key: 383246281995347, 
       api_secret: process.env.API_SECRET_KEY
     });
 

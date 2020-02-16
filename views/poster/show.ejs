@@ -1,0 +1,80 @@
+<%- include("../partials/header") %>
+
+<div class="container mt-5">
+    <div class="card card-body bg-light text-center">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div class="thumbnail">
+                        <img id="profile_image" class="img-responsive" src="<%= poster.image%>" alt="">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div id="profile_detail" class="align-items-center">
+                        <div class="caption-full my-auto">
+                            <h1 class="my-3"><%= poster.author.firstName %> <%= poster.author.lastName %></h1>
+                            <p class="text-left">Price: $<%= poster.price %> / hour</p>
+                            <p class="text-left">Email: <%= poster.skills %></p>
+                            <h5 class="text-left"><%= poster.description%></h5>
+                            <div class="changeButton">
+                                <% if(currentUser && poster.author.id.equals(currentUser._id)) { %>
+                                    <a href="/poster/<%= poster._id %>/edit" class="btn btn-outline-warning btn-sm">Edit</a>
+                                    <form id="deleteForm" action="/poster/<%= poster._id %>?_method=DELETE" method="POST">
+                                        <button class="btn btn-outline-danger btn-sm">Delete</button>
+                                    </form>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+    <div class="card card-body bg-light mt-5">
+        <div class="container">
+            <div class="row">
+                <div id="commentArea" class="col-lg-8 col-sm-10">
+                    <% if (!currentUser) { %> 
+                        <div class="loginButton">
+                            <p>Login to leave a comment</p>
+                        </div>
+                    <% } else { %>
+                        <form action="/poster/<%= poster._id %>/comments" method="POST">
+                            <div class="form-group">
+                                <textarea class="form-control" type="text" name="comment[text]" placeholder="Add a comment..."></textarea>
+                            </div>
+                            <div class="form-group text-right">
+                                <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                            </div>
+                        </form>
+                    <% } %>
+                    <hr>
+                    <% poster.comments.forEach((comment) => { %>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <p id="commentSection" class="ml-auto"><strong><em><%= comment.author.firstName %></em></strong></p>
+                            </div>
+                            <div class="indexButtons ml-auto mt-1">
+                                <% if(currentUser && comment.author.id.equals(currentUser._id)) { %>
+                                <a href="/poster/<%= poster._id%>/comments/<%= comment._id %>/edit" class="btn btn-warning btn-sm">Edit</a>
+                                <form action="/poster/<%= poster._id%>/comments/<%= comment._id %>?_method=DELETE" method="POST" style="display: inline;">
+                                    <input type="submit" class="ml-1 btn btn-danger btn-sm" value="Delete">
+                                </form>
+                                <% } %>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <%= comment.text %>
+                        </div>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-2">
+            <div class="text-right">
+                <a href="/poster" class="btn btn-outline-primary btn-sm">Go Back</a>
+            </div>
+        </div>
+    </div>
+
+<%- include("../partials/footer") %>

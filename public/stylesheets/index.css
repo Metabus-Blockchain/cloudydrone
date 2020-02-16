@@ -1,0 +1,211 @@
+/* NAVBAR */
+
+#postButton {
+  margin: auto 0;
+}
+
+/* END OF NAVBAR */
+
+.blurb h2 {
+    color: #EA1C2C;
+    font-weight: 100;
+    font-size: 2.0rem;
+ }
+ 
+ .blurb p {
+     color: #f498b8;
+     font-weight: 100;
+     font-size: 1.125rem;
+     line-height: 2;
+ }
+
+ .content {
+    margin-top: 2em;
+    margin-bottom: 4em;
+    background-color: #F7F8FA;
+}
+
+#mainNavbar .nav-link:hover {
+    color: #EA1C2C;
+}
+
+/* Small devices (landscape phones, 375px and up) */
+@media (min-width: 375px) {  
+  /* INDEX PAGE */
+  .content {
+    margin-top: 4em;
+    padding: auto ;
+  }
+
+  #mainBoard {
+    height: 16em;
+  }
+
+  #mainPhrase {
+    padding-top: 2em;
+  }
+
+  #displayPhrase {
+    font-size: 1.25em;
+  }
+
+  #displayContainer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* END OF INDEX PAGE */
+
+  /* UPLOAD PAGE */
+
+  #uploadContainer {
+    margin-top: 6em;
+  }
+
+  #uploadPhrase {
+    font-size: 2em;
+  }
+  /* END OF UPLOAD PAGE */
+
+  /* SHOW PAGE */
+  .changeButton {
+    float: right;
+  }
+
+  /* END OF SHOW PAGE */
+
+
+  /* FLASH BOXES */
+  #alertBox {
+    margin-top: 4em;
+  }
+  /* END OF FLASH BOXES */
+}
+
+/* Medium devices (tablets, 768px and up) 
+The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) { 
+  .content {
+    margin-top: 2em;
+    margin-bottom: 4em;
+    background-color: #F7F8FA;
+  }
+
+  #mainPhrase {
+    padding-top: 2em;
+  }
+
+  .changeButton {
+    position: absolute;
+    bottom: 0;
+}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    
+}
+
+body {
+    padding-top: 60px;
+  }
+  @media (max-width: 979px) {
+    body {
+      padding-top: 0px;
+    }
+  }
+
+/* VIEW - INDEX PAGE */
+.card-img, .card-img-bottom, .card-img-top {
+  height: 23em;
+}
+
+#howTitle {
+  margin-bottom: 1em;
+}
+
+#howIcon {
+  height: 5em;
+}
+
+#divider {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+#displaySection {
+  background-color: #f9f9f9;
+  padding: 4em;
+}
+
+#displaySection .jumbotron {
+  background-color: #f9f9f9;
+}
+
+/* VIEW - SHOW PAGE */
+
+.thumbnail img {
+    height: 27em;
+    width: 20em;
+}
+
+#profile_image {
+  border-radius: 45%;
+}
+
+#profile_left{
+  margin-top: 2.5em;
+}
+
+#profile_detail {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.thumbnail .caption-full {
+  padding: 9px;
+}
+
+#deleteForm {
+  display: inline;
+}
+
+/* SHOW PAGE */
+.loginButton{
+  text-align: center;
+}
+
+.loginButton p {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* END OF SHOW PAGE */
+
+
+
+/* COMMENT AREA */
+#commentArea {
+  margin: auto;
+}
+
+#commentSection {
+  display: inline;
+}
+/* END OF COMMENT AREA */
+
+
+/* PROFILE PAGE */
+#profileLeft {
+  text-align: center;
+}
+
+#profileRight {
+  margin-top: 3em;
+}
+
+/* END OF PROFILE PAGE */

@@ -14,6 +14,7 @@
                             <h1 class="my-3"><%= poster.author.firstName %> <%= poster.author.lastName %></h1>
                             <p class="text-left">Price: $<%= poster.price %> / hour</p>
                             <p class="text-left">Email: <%= poster.skills %></p>
+                            <p class="text-left">Location: <%= poster.location %></p>
                             <h5 class="text-left"><%= poster.description%></h5>
                             <div class="changeButton">
                                 <% if(currentUser && poster.author.id.equals(currentUser._id)) { %>

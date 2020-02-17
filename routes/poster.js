@@ -23,8 +23,8 @@ let express     = require("express"),
     var cloudinary = require('cloudinary');
     cloudinary.config({ 
       cloud_name: 'dqu3epati', 
-      api_key: 383246281995347, 
-      api_secret: "8QpFc2qex-TCKKKhNYB3avfR5yE"
+      api_key: process.env.API_KEY_VALUE, 
+      api_secret: process.env.API_SECRET_KEY
     });
 
 
